@@ -14,6 +14,18 @@ abstract class Bird {
     }
 
     protected void info() {
-        System.out.println("Hello, I'm " + species + " and I eat " + food + ".");
+        System.out.println("\nHello, I'm " + species + " and I eat " + food + ".");
+    }
+
+    protected void also() {
+        System.out.print("Also, ");
+    }
+
+    protected void comma() {
+        System.out.print(", ");
+    }
+
+    protected void dot() {
+        System.out.println(".");
     }
 }

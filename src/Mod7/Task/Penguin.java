@@ -1,18 +1,21 @@
 package Mod7.Task;
 
-public class Penguin extends Bird implements ICanSwim{
+public class Penguin extends Bird implements ICanSwim {
     protected Penguin(String species, String food) {
         super.species = species;
         super.food = food;
     }
 
+    @Override
     protected void info() {
-        System.out.print("Hello, I'm " + species + " and I eat " + food + ". ");
+        super.info();
         swim();
     }
 
     @Override
     public void swim() {
-        System.out.println("Also, I can swim.");
+        super.also();
+        ICanSwim.super.swim();
+        super.dot();
     }
 }

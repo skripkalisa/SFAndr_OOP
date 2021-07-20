@@ -11,6 +11,7 @@ abstract class Human {
     }
 
     protected void info() {
-        System.out.println("Hello, I'm " + description + " and I like " + activity + ".");
+        System.out.println("\nHello, I'm " + description + " and I like " + activity + ".");
     }
+
 }

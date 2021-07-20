@@ -8,7 +8,9 @@ class Sportsman extends Human implements ICanRun, ICanSwim {
 
     protected void activities() {
         swim();
+        System.out.print(", ");
         run();
+        System.out.println(".");
     }
 
 }

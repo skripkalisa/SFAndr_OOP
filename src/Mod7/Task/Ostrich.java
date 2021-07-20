@@ -5,14 +5,16 @@ public class Ostrich extends Bird implements ICanRun {
         super(species, food);
     }
 
-
+    @Override
     protected void info() {
-        System.out.print("Hello, I'm " + species + " and I eat " + food + ". ");
+        super.info();
         run();
     }
 
     @Override
     public void run() {
-        System.out.println("Also, I can run.");
+        super.also();
+        ICanRun.super.run();
+        super.dot();
     }
 }
