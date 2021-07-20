@@ -1,10 +1,10 @@
 package Mod6.Task;
 
 class Staff extends Company {
-    static int staffMembers = 0;
-    protected String position;
-    protected String name;
-    protected int age;
+    private static int staffMembers = 0;
+    String position;
+    String name;
+    int age;
 
     Staff() {
         super("Employee", true);
@@ -43,7 +43,7 @@ class Staff extends Company {
 }
 
 class Board extends Staff {
-    static int boardMembers = 0;
+    private static int boardMembers = 0;
 
     Board(String position, String name, int age) {
         super.position = position;
