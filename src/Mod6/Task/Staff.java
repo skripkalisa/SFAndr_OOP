@@ -12,7 +12,7 @@ class Staff extends Company {
 
     }
 
-    protected Staff(String position, String name, int age) {
+    Staff(String position, String name, int age) {
         super("Employee", true);
         this.position = position;
         this.name = name;
@@ -20,7 +20,8 @@ class Staff extends Company {
         message();
     }
 
-    private void message() {
+    @Override
+    protected void message() {
         if (active) {
             staffMembers++;
             System.out.println("Welcome our new staff member!");
@@ -34,6 +35,7 @@ class Staff extends Company {
         System.out.println("We now have " + staffMembers + " staff member(s) in our Company!");
     }
 
+    @Override
     protected void action() {
         System.out.printf("%s is working hard.\n", this.position);
 
@@ -50,7 +52,8 @@ class Board extends Staff {
         message();
     }
 
-    private void message() {
+    @Override
+    protected void message() {
         if (active) {
             boardMembers++;
             System.out.println("Welcome your new boss!");

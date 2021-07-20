@@ -1,16 +1,21 @@
 package Mod6.Task;
 
-class Company {
+abstract class Company {
 
     protected String relation;
     protected boolean active;
 
-    public Company() {
-        //
-    }
+//    public Company() {
+//        //
+//    }
 
-    public Company(String relation, boolean active) {
+    protected Company(String relation, boolean active) {
         this.relation = relation;
         this.active = active;
     }
+
+    protected void message(){
+        System.out.println("Company class is used");
+    }
+    abstract protected void action();
 }

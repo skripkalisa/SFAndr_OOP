@@ -1,10 +1,10 @@
 package Mod6.Task;
 
-public class Client extends Company {
-    static int countClients = 0;
-    static int income = 0;
-    String name;
-    String status;
+  class Client extends Company {
+    private static int countClients = 0;
+    private static int income = 0;
+    private String name;
+    private String status;
 
     Client() {
         super("Client", true);
@@ -17,13 +17,18 @@ public class Client extends Company {
         countClients++;
         message();
     }
-
-    private void message() {
+    @Override
+    protected void message() {
         System.out.println("Hooray! We have a new customer!");
         System.out.println("Total number of customers: " + countClients);
     }
 
-    protected void purchase(int amount) {
+      @Override
+      protected void action() {
+
+      }
+
+      protected void purchase(int amount) {
         income += amount;
         System.out.printf("Our customer, %s %s has purchased goods for %d$.\n", this.status, this.name, amount);
         System.out.printf("The company income is %d.\n", income);
