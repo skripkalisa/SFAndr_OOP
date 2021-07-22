@@ -1,4 +1,4 @@
-/src/Mod6/
+#/src/Mod6/
 /out/
-.idea/
-OOP.iml
+#.idea/
+#OOP.iml
